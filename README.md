@@ -9,7 +9,8 @@ Python 3.8, PyTorch 1.8.2 and other common packages are listed in [requirements.
 ## Usage
 ## Citation
 Please consider citing the project in your publications if it helps your research. The following is a BibTeX reference. The BibTeX entry requires the url LaTeX package.
-'''python
-hello
-'''
-
+```python
+writeToNpy('./data/training', './npdata/training', training=False)
+writeToNpy('./data/testing', './npdata/testing', training=True)
+writeToNpy('./data/validation', './npdata/validation', training=True)
+```
