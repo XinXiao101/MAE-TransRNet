@@ -10,7 +10,7 @@ The repository gives an improved Transformer-ConvNet architecture with Masked Au
 ## Usage
 ### Preprocessing of ACDC Data
 #### MAE architecture for Pre-training
-
+For the pre-training task, we pre-processed the ACDC dataset in this way: we divided the 150 (100+50) cases of nii data into three folders of ImagesTr, ImagesTs, and labelsTr according to a JSON file which is provided which contains the training and validation splits that were used for the training. The json file can be found in the json_files directory of the json_files.
 #### Downstream task
 the dataset applied is the publicly available benchmark dataset from the Automated Cardiac Diagnosis Challenge(ACDC) in 2017. This dataset contains short-axis cardiac 3D MR images from a total of 150 cases for two time frames of initial frame-end frame, and the public dataset applied provides standard segmentation labels for three parts (including the left ventricle (LV), the left ventricular myocardium (Myo), and the right ventricle (RV)) for the registration task, which involves five categories of cases (including normal, heart failure with infarction, dilated cardiomyopathy, hypertrophic cardiomyopathy, and right ventricular abnormalities). 100 cases of the above 150 cases contain the triple segmentation labels, while 50 cases do not contain labels. 
 
@@ -18,17 +18,7 @@ At the data preprocessing stage, all the images are cropped to $64\times 128\tim
 
 Both training data, validation data and test data are transformed as .npy files through preprocess.py.
 
-
-
 ```python
-writeToNpy('./data/training', './npdata/training', training=False)
-writeToNpy('./data/testing', './npdata/testing', training=True)
-writeToNpy('./data/validation', './npdata/validation', training=True)
-```
-
-## Citation
-Please consider citing the project in your publications if it helps your research. The following is a BibTeX reference. The BibTeX entry requires the url LaTeX package.
-```bash
 writeToNpy('./data/training', './npdata/training', training=False)
 writeToNpy('./data/testing', './npdata/testing', training=True)
 writeToNpy('./data/validation', './npdata/validation', training=True)
