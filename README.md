@@ -23,3 +23,7 @@ writeToNpy('./data/training', './npdata/training', training=False)
 writeToNpy('./data/testing', './npdata/testing', training=True)
 writeToNpy('./data/validation', './npdata/validation', training=True)
 ```
+### Training
+#### MAE Pretraining
+
+#### Registration task
