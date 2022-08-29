@@ -2,7 +2,7 @@
 Transformer-ConvNet with Masked AutoEncoder for Cardiac Image Registration
 ## Overview
 This repository provides the method described in the paper
-> XX, et al. "MAE-TransRNet: An improved Transformer-ConvNet architecture with Masked AutoEncoder for Cardiac MRI Registration"
+> Zhaowen Qiu, et al. "MAE-TransRNet: An improved Transformer-ConvNet architecture with Masked AutoEncoder for Cardiac MRI Registration"
 ## Requirements
 Python 3.8, PyTorch 1.8.2 and other common packages are listed in [requirements.txt](https://github.com/SuperNatural-101/MAE-TransRNet/blob/main/requirements.txt)
 ## Description
@@ -23,7 +23,3 @@ writeToNpy('./data/training', './npdata/training', training=False)
 writeToNpy('./data/testing', './npdata/testing', training=True)
 writeToNpy('./data/validation', './npdata/validation', training=True)
 ```
-### Training
-#### MAE Pretraining
-
-#### Registration task
